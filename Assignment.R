@@ -34,6 +34,7 @@ colnames(data) <- c("Time", "x1", "x2", "x3", "x4", "x5")
 # Check the first few rows of the dataset to ensure columns are renamed
 head(data)
 
+#Task 1
 # Time series plots
 p1 <- ggplot(data, aes(x = Time, y = x1)) + geom_line() + ggtitle("Gene x1 Time Series")
 p2 <- ggplot(data, aes(x = Time, y = x2)) + geom_line() + ggtitle("Gene x2 Time Series")
@@ -201,6 +202,7 @@ ggplot() +
 theta <- coef(model5)
 print(theta)
 
+#Task3
 # Load necessary libraries
 library(abc)
 library(ggplot2)
@@ -248,7 +250,7 @@ hist(accepted_samples$x4, main = "Posterior Distribution of x4", xlab = "x4", br
 # Summarize the accepted samples
 summary(accepted_samples)
 
-# Task 4: Plot the joint and marginal posterior distributions
+#Plot the joint and marginal posterior distributions
 
 # Joint posterior distribution plot
 joint_plot <- ggplot(accepted_samples, aes(x = intercept, y = x4)) +
