@@ -66,6 +66,7 @@ train_indices <- sample(seq_len(nrow(data)), size = 0.7 * nrow(data))
 train_data <- data[train_indices, ]
 test_data <- data[-train_indices, ]
 
+# Task 2
 #  Task 2.1: Define the models
 model1 <- lm(x2 ~ x4 + I(x3^2), data = train_data)
 model2 <- lm(x2 ~ x4 + I(x3^2) + x5, data = train_data)
